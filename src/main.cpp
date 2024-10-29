@@ -19,12 +19,14 @@ void loop()
   if (isnan(dhtTemperature) || isnan(dhtHumidity))
   {                                   // 如果读取错误
     Serial.println("读取传感器失败"); // 读取失败提示
+    delay(1000);
     return;
   }
 
-  delay(8000);
+  delay(10000);
   Serial.print("我是温度");
   Serial.print(dhtTemperature);
+  Serial.print(" ");
   Serial.print("我是湿度");
   Serial.print(dhtHumidity);
   Serial.print("\n");
